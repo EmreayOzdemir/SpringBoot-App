@@ -5,8 +5,8 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="selenium" class="services.Selenium"></bean>
-    <bean id="java" class="services.Java" scope="prototype"></bean>
+    <bean id="selenium" class="mainPackage.services.Selenium"></bean>
+    <bean id="java" class="mainPackage.services.Java" scope="prototype"></bean>
 
 
 </beans>

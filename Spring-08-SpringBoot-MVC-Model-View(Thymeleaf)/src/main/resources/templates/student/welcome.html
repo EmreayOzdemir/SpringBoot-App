@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/>/www.thymeleaf.org">
+<head>
+    <meta charset="UFT-8">
+    <title>
+        MyWebsite
+    </title>
+</head>
+<body>
+<h1>
+    <!---TEXT WITH thym-->
+    <h2 th:text="${name}"></h2>
+    <h3 th:text="${course}"></h3>
+    <h4 th:text="${subject}"></h4>
+    <h5 th:text="${id}"></h5>
+    <h6 th:text="${numbers}"></h6>
+    <h6 th:text="${numbers.get(0)}"></h6>
+    <h6 th:text="${birthday}"></h6>
+    <!---Concatination of 2 diff elements-->
+    <h6 th:text="${'Hello' + ' '+ name}"></h6>
+    <h6 th:text="${student.getFirstName()}"></h6>
+
+    <!--Link-->
+    <a th:href="@{https://cybertekschool.com}">Cybertek</a><br>
+    <a th:href="@{/student/register}">Register</a>
+
+    <!---adding parameters to link-->
+    <a th:href="@{/student/welcome(id=3)}">Link2</a>
+    <a th:href="@{/student/welcome(id=${student.id})}">Link3</a>
+
+    <!--Iteration-->
+    <ul>
+        <li th:each="number: ${numbers}" th:text="${number}"></li>
+    </ul>
+
+    Hello from developer!!</h1>
+
+
+<!----Fragment-->
+
+<div th:replace="fragments/footer ::foter"></div>
+</body>
+</html>

@@ -1,12 +1,11 @@
-import interfaces.Mentor;
+import mainPackage.interfaces.Mentor;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import services.FullTimeMentor;
 
 public class CybertekApp {
     public static void main(String[] args) {
-        //here created a container where I save all my beans, what ever beans I defined inside my config file.
+        //here created a container where I save all my beans, what ever beans I defined inside my mainPackage.config file.
         BeanFactory container=new ClassPathXmlApplicationContext("config.xml");
        // Mentor mentor=new FullTimeMentor(); usually we do it like that but spring is doing better
         //so follow the next!
